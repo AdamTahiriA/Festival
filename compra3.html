@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madrid Rhythms Festival 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lobster', cursive;
+            background: url('https://wallpaper.forfun.com/fetch/d0/d04bad5ad22c4c19b3d5974d52342a67.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: gold;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .section {
+            width: 45%;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 20px;
+            margin: 10px auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border-radius: 15px;
+            font-size: 1.2em;
+        }
+        .section:hover {
+            transform: scale(1.1);
+        }
+        .info, .singers, .tickets, .contact, .sponsors, .announcement, .buy-tickets {
+            display: none;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 15px;
+        }
+        .info h2, .singers h2, .tickets h2, .contact h2, .sponsors h2, .announcement h2, .buy-tickets h2 {
+            font-size: 2em;
+        }
+        .stadium {
+            margin-bottom: 20px;
+        }
+        .stadium img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .stadium p {
+            margin: 0;
+        }
+        .free-colacao {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .singer-image img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            var sections = document.querySelectorAll('.info, .singers, .tickets, .contact, .sponsors, .announcement, .buy-tickets');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            section.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Madrid Rhythms Festival 2024</h1>
+    </header>
+    <div class="container">
+        <div class="section" onclick="toggleSection('about')">About</div>
+        <div class="section" onclick="toggleSection('singers')">Singers</div>
+        <div class="section" onclick="toggleSection('tickets')">Tickets</div>
+        <div class="section" onclick="toggleSection('contact')">Contact</div>
+        <div class="section" onclick="toggleSection('sponsors')">Sponsors</div>
+        <div class="section" onclick="toggleSection('announcement')">Announcement</div>
+        <div class="section" onclick="toggleSection('buy-tickets')">Buy Tickets</div>
+    </div>
+    <div id="about" class="info">
+        <h2>About the Festival</h2>
+        <p>Madrid Rhythms the festival will take place on August 5, 2024, across three iconic stadiums in Madrid: the Coliseum (Getafe), the Bernabeu (Real Madrid), and the Wanda Metropolitano (Atletico Madrid).</p>
+        <div class="stadium">
+            <h3>Stadiums</h3>
+            <div class="stadium-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhMgDPqhZS45gNeAQC1__mgcxLyv44LoMqARFMqssm8w&s" alt="Coliseum (Getafe)">
+                <p>Coliseum (Getafe)</p>
+            </div>
+            <div class="stadium-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR59gjgsJfR_vISAndIyU3SZUyxhuY7GL118kuirOcWDg&s" alt="Bernabeu (Real Madrid)">
+                <p>Bernabeu (Real Madrid)</p>
+            </div>
+            <div class="stadium-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzVb2JwUbeXsKjbn8z8zPvDxrVBbuZLZfUmA&s" alt="Wanda Metropolitano (Atletico Madrid)">
+                <p>Wanda Metropolitano (Atletico Madrid)</p>
+            </div>
+        </div>
+        <div class="free-colacao">
+            <h3>Free Cola-Cao for Everyone!</h3>
+            <p>Don't forget to enjoy our complimentary Cola-Cao at the festival!</p>
+        </div>
+    </div>
+    <div id="singers" class="singers">
+        <h2>Singers</h2>
+        <ul>
+            <li>Shakira</li>
+            <li>Morad with Hakimi</li>
+            <li>El Alfa</li>
+            <li>3dnan</li>
+            <li>Myke Towers</li>
+        </ul>
+        <div class="singer-image">
+            <img src="Music Party Festival Event Poster.png" alt="Singers">
+        </div>
+    </div>
+    <div id="tickets" class="tickets">
+        <h2>Tickets</h2>
+        <p>Don't miss out on this spectacular event! Choose your ticket type:</p>
+        <ul>
+            <li><strong>Normal Ticket:</strong> $100 (access to one stadium)</li>
+            <li><strong>VIP Ticket:</strong> $350 (access to all three stadiums, transportation between stadiums, and hotel accommodation)</li>
+        </ul>
+    </div>
+    <div id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="mailto:adamtahiri2020@bisbeberenguer.cat" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <div id="sponsors" class="sponsors">
+        <h2>Sponsors</h2>
+        <p>Special thanks to our sponsors:</p>
+        <ul>
+            <li>Cola-Cao</li>
+            <li>Decathlon</li>
+            <li>Domino's</li>
+            <li>Spotify</li>
+        </ul>
+        <p>For making this event possible!</p>
+    </div>
+    <div id="announcement" class="announcement">
+        <h2>Announcement</h2>
+        <p>Check out our latest announcement: <a href="https://drive.google.com/file/d/1t2S3lXGNJY7EoccVTStNwnMGBu0EwQlu/view?usp=sharing" target="_blank">Latest Announcement</a></p>
+    </div>
+    <div id="buy-tickets" class="buy-tickets">
+        <h2>Buy Tickets</h2>
+        <p>Click the button below to purchase your tickets:</p>
+        <a href="https://yourticketpurchaseurl.com" target="_blank">
+            <button style="padding: 10px 20px; font-size: 1.5em; border-radius: 10px;">Buy Tickets Now</button>
+        </a>
+    </div>
+</body>
+</html>
